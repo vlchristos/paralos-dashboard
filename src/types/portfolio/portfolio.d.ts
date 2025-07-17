@@ -1,14 +1,17 @@
 export type Portfolio = {
   id: string;
   name: string;
-  sector: string;
   assets: PortfolioAsset[];
 };
 
 export type PortfolioAsset = {
   symbol: string;
+  sector: string;
+};
+
+export type PortfolioRawData = {
   name: string;
-  quantity: number;
-  price: number;
-  currency: string;
+  portfolio: string;
+  sector: string;
+  symbol: string;
 };
