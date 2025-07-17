@@ -22,9 +22,6 @@ const themeOptions = (mode: PaletteMode) =>
             divider: "rgba(0,0,0,0.08)",
           }
         : {
-            primary: {
-              main: "#1D2554",
-            },
             warning: {
               main: "#e2b26c",
             },

@@ -1,14 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { Portfolio } from "../../types/portfolio/portfolio";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import type {
+  Portfolio,
+  PortfolioRawData,
+} from "../../types/portfolio/portfolio";
 
 type PortfoliosState = {
   portfolioItems: Portfolio[];
-  selectedPortfolioId?: Portfolio;
+  selectedPortfolioId: string | null;
+  portfolioRawData?: PortfolioRawData[];
 };
 
 export const initialState: PortfoliosState = {
   portfolioItems: [],
-  selectedPortfolioId: undefined,
+  selectedPortfolioId: null,
+  portfolioRawData: undefined,
 };
 
 export const portfoliosReducer = createSlice({
@@ -16,16 +21,32 @@ export const portfoliosReducer = createSlice({
   initialState,
   reducers: {
     getPortfolios: () => {},
-    setPortfolios: (state, action) => {
+    setPortfoliosRawData: (
+      state: PortfoliosState,
+      action: PayloadAction<PortfolioRawData[]>,
+    ) => {
+      state.portfolioRawData = action.payload;
+    },
+    setPortfolios: (
+      state: PortfoliosState,
+      action: PayloadAction<Portfolio[]>,
+    ) => {
       state.portfolioItems = action.payload;
     },
-    setSelectedPortfolioId: (state, action) => {
+    setSelectedPortfolioId: (
+      state: PortfoliosState,
+      action: PayloadAction<string | null>,
+    ) => {
       state.selectedPortfolioId = action.payload;
     },
   },
 });
 
-export const { getPortfolios, setPortfolios, setSelectedPortfolioId } =
-  portfoliosReducer.actions;
+export const {
+  getPortfolios,
+  setPortfolios,
+  setSelectedPortfolioId,
+  setPortfoliosRawData,
+} = portfoliosReducer.actions;
 
 export default portfoliosReducer.reducer;
