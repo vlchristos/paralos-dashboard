@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, CircularProgress, Typography } from "@mui/material";
 import type { TodayStock } from "../../types/today/today";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -38,12 +38,25 @@ export default function StocksTable({ stocks }: StocksTableProps) {
     ),
   );
 
+  if (rows.length === 0) {
+    return (
+      <Box
+        height={300}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
+
   return (
     <TableContainer>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell></TableCell>
+            <TableCell>Symbol</TableCell>
             <TableCell align="right">Quantity</TableCell>
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Change</TableCell>

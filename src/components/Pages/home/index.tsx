@@ -1,6 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
 import AppLayout from "../../AppLayout";
-import PortfolioSelector from "./PortfolioSelector";
 import { useAppDispatch, useAppSelector } from "../../../store";
 import { useEffect } from "react";
 import { getTodayStocks } from "../../../store/today/todaySlice";

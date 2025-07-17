@@ -4,6 +4,26 @@ import { selectActivePortfolioStats } from "../../../store/portfolios/selectors"
 
 export default function PortfolioStats() {
   const selectedPortfolioStats = useAppSelector(selectActivePortfolioStats);
+
+  function isNegative(value?: number): boolean {
+    return value !== undefined && value < 0;
+  }
+
+  if (!selectedPortfolioStats) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height={100}
+      >
+        <Typography variant="body2" color="textSecondary">
+          No portfolio stats available
+        </Typography>
+      </Box>
+    );
+  }
+
   return (
     <Box display="flex" gap={5} flexWrap="wrap">
       <Box>
