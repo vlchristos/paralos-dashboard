@@ -6,7 +6,7 @@ type GlobalState = {
 };
 
 export const initialState: GlobalState = {
-  systemThemeMode: "",
+  systemThemeMode: "auto",
   mainMenuOpen: true,
 };
 
