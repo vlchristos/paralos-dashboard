@@ -3,11 +3,13 @@ import { useMediaQuery } from "@mui/material";
 import { ThemeProvider, type PaletteMode } from "@mui/material/styles";
 import { useEffect, useMemo, useState } from "react";
 import { theme } from "./themeOptions";
-import { useAppSelector } from "./store";
+import { useAppDispatch, useAppSelector } from "./store";
 import { RouterProvider } from "react-router";
 import { router } from "./AppRouting";
+import { getPortfolios } from "./store/portfolios/portfoliosSlice";
 
 function App() {
+  const dispatch = useAppDispatch();
   const darkModePreference = useAppSelector(
     (state) => state.global.systemThemeMode,
   );
@@ -25,6 +27,10 @@ function App() {
       setDarkMode(prefersDarkMode ? "dark" : "light");
     }
   }, [darkModePreference, prefersDarkMode]);
+
+  useEffect(() => {
+    dispatch(getPortfolios());
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const paralosTheme = useMemo(
     () => theme(darkMode as PaletteMode),

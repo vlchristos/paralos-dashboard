@@ -6,16 +6,18 @@ import {
 } from "react-redux";
 import { reducer } from "./rootReducer";
 import createSagaMiddleware from "redux-saga";
+import rootSaga from "./rootSaga";
 
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: reducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(sagaMiddleware),
-
+    getDefaultMiddleware({}).concat(sagaMiddleware),
   devTools: import.meta.env.VITE_ENV === "development",
 });
+
+sagaMiddleware.run(rootSaga);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
