@@ -1,0 +1,191 @@
+[
+  {
+    "symbol": "AAPL",
+    "quantity": 13.0,
+    "price": 215.2400054932,
+    "change_pct": 0.0119892944,
+    "daily_pnl": 33.1500396729
+  },
+  {
+    "symbol": "AMZN",
+    "quantity": 40.5,
+    "price": 195.5399932861,
+    "change_pct": 0.0141063472,
+    "daily_pnl": 110.1594314575
+  },
+  {
+    "symbol": "COIN",
+    "quantity": 62.0,
+    "price": 189.75,
+    "change_pct": 0.047532299,
+    "daily_pnl": 533.8200378418
+  },
+  {
+    "symbol": "CRWD",
+    "quantity": 70.0,
+    "price": 375.049987793,
+    "change_pct": 0.0327688121,
+    "daily_pnl": 832.9995727539
+  },
+  {
+    "symbol": "CVX",
+    "quantity": 193.0,
+    "price": 164.0500030518,
+    "change_pct": 0.0201480352,
+    "daily_pnl": 625.3210601807
+  },
+  {
+    "symbol": "DDOG",
+    "quantity": -18.0,
+    "price": 104.4300003052,
+    "change_pct": 0.0145730107,
+    "daily_pnl": -27.0
+  },
+  {
+    "symbol": "GOOGL",
+    "quantity": 58.0,
+    "price": 163.8899993896,
+    "change_pct": 0.0200410858,
+    "daily_pnl": 186.7600708008
+  },
+  {
+    "symbol": "INTC",
+    "quantity": -982.0,
+    "price": 24.1200008392,
+    "change_pct": -0.0694444148,
+    "daily_pnl": 1767.5992507935
+  },
+  {
+    "symbol": "JNJ",
+    "quantity": 87.0,
+    "price": 162.9900054932,
+    "change_pct": -0.0076711994,
+    "daily_pnl": -109.6195220947
+  },
+  {
+    "symbol": "JPM",
+    "quantity": -110.0,
+    "price": 239.1100006104,
+    "change_pct": 0.0176192679,
+    "daily_pnl": -455.3999328613
+  },
+  {
+    "symbol": "KO",
+    "quantity": 54.0,
+    "price": 69.2799987793,
+    "change_pct": -0.0014413156,
+    "daily_pnl": -5.3999176025
+  },
+  {
+    "symbol": "META",
+    "quantity": -17.0,
+    "price": 584.0599975586,
+    "change_pct": 0.0029191776,
+    "daily_pnl": -28.9002075195
+  },
+  {
+    "symbol": "MRNA",
+    "quantity": 235.0,
+    "price": 33.3199996948,
+    "change_pct": -0.0144928027,
+    "daily_pnl": -115.1503944397
+  },
+  {
+    "symbol": "MSFT",
+    "quantity": -33.5,
+    "price": 387.8200073242,
+    "change_pct": 0.0112119796,
+    "daily_pnl": -144.0506134033
+  },
+  {
+    "symbol": "NVDA",
+    "quantity": 229.0,
+    "price": 117.5199966431,
+    "change_pct": 0.0181061798,
+    "daily_pnl": 478.609161377
+  },
+  {
+    "symbol": "PEP",
+    "quantity": -78.0,
+    "price": 148.1100006104,
+    "change_pct": -0.0059064692,
+    "daily_pnl": 68.6403808594
+  },
+  {
+    "symbol": "PG",
+    "quantity": 94.0,
+    "price": 168.5700073242,
+    "change_pct": 0.0051279028,
+    "daily_pnl": 80.840057373
+  },
+  {
+    "symbol": "PLTR",
+    "quantity": 696.0,
+    "price": 86.0999984741,
+    "change_pct": 0.0263440112,
+    "daily_pnl": 1538.159362793
+  },
+  {
+    "symbol": "RBLX",
+    "quantity": 341.0,
+    "price": 58.0999984741,
+    "change_pct": 0.0378706493,
+    "daily_pnl": 722.9196357727
+  },
+  {
+    "symbol": "RIVN",
+    "quantity": 1949.0,
+    "price": 11.3599996567,
+    "change_pct": 0.0142857009,
+    "daily_pnl": 311.8397026062
+  },
+  {
+    "symbol": "SHOP",
+    "quantity": 233.0,
+    "price": 101.5400009155,
+    "change_pct": 0.0800978471,
+    "daily_pnl": 1754.4897155762
+  },
+  {
+    "symbol": "SNOW",
+    "quantity": -46.0,
+    "price": 155.9600067139,
+    "change_pct": 0.0103654191,
+    "daily_pnl": -73.6002807617
+  },
+  {
+    "symbol": "TSLA",
+    "quantity": -88.0,
+    "price": 235.8600006104,
+    "change_pct": 0.0468243894,
+    "daily_pnl": -928.4002685547
+  },
+  {
+    "symbol": "U",
+    "quantity": 614.0,
+    "price": 21.5599994659,
+    "change_pct": 0.0193853359,
+    "daily_pnl": 251.739906311
+  },
+  {
+    "symbol": "VZ",
+    "quantity": 255.5,
+    "price": 43.9399986267,
+    "change_pct": -0.0065566565,
+    "daily_pnl": -74.0952339172
+  },
+  {
+    "symbol": "WMT",
+    "quantity": -425.0,
+    "price": 86.3300018311,
+    "change_pct": 0.0086459344,
+    "daily_pnl": -314.5023345947
+  },
+  {
+    "symbol": "XOM",
+    "quantity": 229.0,
+    "price": 115.4100036621,
+    "change_pct": 0.0155755393,
+    "daily_pnl": 405.3309783936
+  }
+]

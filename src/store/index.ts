@@ -5,9 +5,15 @@ import {
   type TypedUseSelectorHook,
 } from "react-redux";
 import { reducer } from "./rootReducer";
+import createSagaMiddleware from "redux-saga";
+
+const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: reducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(sagaMiddleware),
+
   devTools: import.meta.env.VITE_ENV === "development",
 });
 
