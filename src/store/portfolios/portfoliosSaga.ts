@@ -1,6 +1,14 @@
 import { put, takeLatest } from "redux-saga/effects";
-import { getPortfolios, setPortfolios } from "./portfoliosSlice";
+import {
+  getPortfolios,
+  setPortfolios,
+  setPortfoliosRawData,
+  setSelectedPortfolioId,
+} from "./portfoliosSlice";
 import portfoliosRawData from "../../raw_data/portfolios.json";
+import portfolioGrowthHistory from "../../raw_data/history/portfolio/growth.json";
+import portfolioStableHistory from "../../raw_data/history/portfolio/stable.json";
+import portfolioTechHistory from "../../raw_data/history/portfolio/tech.json";
 import type {
   Portfolio,
   PortfolioRawData,
@@ -39,8 +47,24 @@ function getAssetsForPortfolio(
     }));
 }
 
+function getPortfolioHistory(portfolioId: string) {
+  switch (portfolioId) {
+    case "growth":
+      return portfolioGrowthHistory;
+    case "stable":
+      return portfolioStableHistory;
+    case "tech":
+      return portfolioTechHistory;
+    default:
+      return [];
+  }
+}
+
 function* loadPortfolios() {
   try {
+    yield new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call delay
+
+    yield put(setPortfoliosRawData(portfoliosRawData));
     const portfoliosData = addIdsToPortfolios(portfoliosRawData);
     const uniquePortfolios = getUniquePortfolios(portfoliosData);
 
@@ -48,9 +72,11 @@ function* loadPortfolios() {
       id: portfolio.id,
       name: portfolio.portfolio,
       assets: getAssetsForPortfolio(portfoliosData, portfolio.id),
+      history: getPortfolioHistory(portfolio.id),
     }));
 
     yield put(setPortfolios(portfolios));
+    yield put(setSelectedPortfolioId(portfolios[0]?.id || null));
   } catch (error) {
     console.error("Error loading portfolios:", error);
   }
