@@ -14,11 +14,16 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShowChartOutlinedIcon from "@mui/icons-material/ShowChartOutlined";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import { useAppSelector } from "../store";
+import { Link } from "react-router";
 
 const DRAWER_WIDTH = 240;
 const MENU_ITEMS = [
-  { text: "Stocks", icon: <ShowChartOutlinedIcon /> },
-  { text: "Portfolio", icon: <BusinessCenterOutlinedIcon /> },
+  { text: "Stocks", icon: <ShowChartOutlinedIcon />, url: "/stocks" },
+  {
+    text: "Portfolio",
+    icon: <BusinessCenterOutlinedIcon />,
+    url: "/portfolio",
+  },
 ];
 
 export default function AppDrawer() {
@@ -43,7 +48,7 @@ export default function AppDrawer() {
       <Box sx={{ overflow: "auto" }}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton component={Link} to="/">
               <ListItemIcon>
                 <HomeOutlinedIcon />
               </ListItemIcon>
@@ -55,7 +60,7 @@ export default function AppDrawer() {
         <List>
           {MENU_ITEMS.map((item, index) => (
             <ListItem key={index} disablePadding>
-              <ListItemButton>
+              <ListItemButton component={Link} to={item.url}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
               </ListItemButton>

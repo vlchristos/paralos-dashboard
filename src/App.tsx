@@ -1,12 +1,11 @@
-import AppContent from "./components/AppContent";
-import AppDrawer from "./components/AppDrawer";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Box, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import { ThemeProvider, type PaletteMode } from "@mui/material/styles";
 import { useEffect, useMemo, useState } from "react";
 import { theme } from "./themeOptions";
-import AppHeader from "./components/AppHeader";
 import { useAppSelector } from "./store";
+import { RouterProvider } from "react-router";
+import { router } from "./AppRouting";
 
 function App() {
   const darkModePreference = useAppSelector(
@@ -25,7 +24,7 @@ function App() {
     } else {
       setDarkMode(prefersDarkMode ? "dark" : "light");
     }
-  }, [darkModePreference, prefersDarkMode]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [darkModePreference, prefersDarkMode]);
 
   const paralosTheme = useMemo(
     () => theme(darkMode as PaletteMode),
@@ -34,12 +33,8 @@ function App() {
 
   return (
     <ThemeProvider theme={paralosTheme}>
-      <Box display="flex">
-        <CssBaseline />
-        <AppHeader />
-        <AppDrawer />
-        <AppContent />
-      </Box>
+      <CssBaseline />
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }
