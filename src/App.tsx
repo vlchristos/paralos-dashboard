@@ -27,7 +27,7 @@ function App() {
     }
     // TODO: Uncomment when the theme mode is implemented in the store
     // dispatch(setSystemThemeMode(prefersDarkMode ? "dark" : "light"));
-  }, [darkModePreference, prefersDarkMode]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [darkModePreference, prefersDarkMode]);
 
   const paralosTheme = useMemo(
     () => theme(darkMode as PaletteMode),

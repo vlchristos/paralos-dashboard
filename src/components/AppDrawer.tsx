@@ -8,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
+  useMediaQuery,
 } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShowChartOutlinedIcon from "@mui/icons-material/ShowChartOutlined";
@@ -21,17 +22,19 @@ const MENU_ITEMS = [
 ];
 
 export default function AppDrawer() {
+  const isMobile = useMediaQuery("(max-width: 600px)"); // Example breakpoint for responsive design
   const drawerOpen = useAppSelector((state) => state.global.mainMenuOpen);
   return (
     <Drawer
       open={drawerOpen}
-      variant="persistent"
+      variant={isMobile ? "temporary" : "permanent"}
       sx={{
         width: drawerOpen ? DRAWER_WIDTH : 0,
         flexShrink: 0,
         transition: "width 0.3s ease-in-out",
         [`& .MuiDrawer-paper`]: {
-          width: DRAWER_WIDTH,
+          width: drawerOpen ? DRAWER_WIDTH : 0,
+          transition: "width 0.3s ease-in-out",
           boxSizing: "border-box",
         },
       }}
