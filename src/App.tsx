@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Container } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
@@ -21,7 +21,7 @@ function App() {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Container maxWidth="lg"></Container>
+        <Typography>Hello world</Typography>
       </ThemeProvider>
     </Provider>
   );
