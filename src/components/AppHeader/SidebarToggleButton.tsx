@@ -11,7 +11,7 @@ export default function SidebarToggleButton() {
   }
 
   return (
-    <IconButton onClick={handleToggle}>
+    <IconButton onClick={handleToggle} color="inherit">
       <MenuIcon color="inherit" />
     </IconButton>
   );
