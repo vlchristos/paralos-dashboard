@@ -1,0 +1,164 @@
+[
+  {
+    "portfolio": "Tech",
+    "symbol": "AAPL",
+    "name": "Apple",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "MSFT",
+    "name": "Microsoft",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "NVDA",
+    "name": "NVIDIA",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "AMZN",
+    "name": "Amazon",
+    "sector": "Consumer Cyclical"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "GOOGL",
+    "name": "Alphabet",
+    "sector": "Communication Services"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "META",
+    "name": "Meta Platforms",
+    "sector": "Communication Services"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "TSLA",
+    "name": "Tesla",
+    "sector": "Consumer Cyclical"
+  },
+  {
+    "portfolio": "Tech",
+    "symbol": "INTC",
+    "name": "Intel",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "PG",
+    "name": "Procter & Gamble",
+    "sector": "Consumer Defensive"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "KO",
+    "name": "Coca-Cola",
+    "sector": "Consumer Defensive"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "WMT",
+    "name": "Walmart",
+    "sector": "Consumer Defensive"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "JPM",
+    "name": "JPMorgan Chase",
+    "sector": "Financial Services"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "VZ",
+    "name": "Verizon",
+    "sector": "Communication Services"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "XOM",
+    "name": "ExxonMobil",
+    "sector": "Energy"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "PEP",
+    "name": "PepsiCo",
+    "sector": "Consumer Defensive"
+  },
+  {
+    "portfolio": "Stable",
+    "symbol": "CVX",
+    "name": "Chevron",
+    "sector": "Energy"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "PLTR",
+    "name": "Palantir Technologies",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "RIVN",
+    "name": "Rivian Automotive",
+    "sector": "Consumer Cyclical"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "COIN",
+    "name": "Coinbase Global",
+    "sector": "Financial Services"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "SHOP",
+    "name": "Shopify",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "SNOW",
+    "name": "Snowflake",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "CRWD",
+    "name": "CrowdStrike",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "MRNA",
+    "name": "Moderna",
+    "sector": "Healthcare"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "U",
+    "name": "Unity Software",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "DDOG",
+    "name": "Datadog",
+    "sector": "Technology"
+  },
+  {
+    "portfolio": "Growth",
+    "symbol": "RBLX",
+    "name": "Roblox",
+    "sector": "Communication Services"
+  }
+]

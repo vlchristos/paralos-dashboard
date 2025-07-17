@@ -1,0 +1,902 @@
+[
+  {
+    "symbol": "AAPL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-03-30",
+    "entry_price": 177.8303070068,
+    "exit_price": 170.6741027832,
+    "size": 23.0,
+    "pnl": -164.5926971436,
+    "status": "Closed"
+  },
+  {
+    "symbol": "AAPL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 219.5039661114,
+    "exit_price": 215.2400054932,
+    "size": 13.0,
+    "pnl": -55.4314880371,
+    "status": "Open"
+  },
+  {
+    "symbol": "AMZN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-03-30",
+    "entry_price": 178.1499938965,
+    "exit_price": 180.3800048828,
+    "size": 11.0,
+    "pnl": 24.5301208496,
+    "status": "Closed"
+  },
+  {
+    "symbol": "AMZN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-16",
+    "entry_price": 181.8071407396,
+    "exit_price": 184.8899993896,
+    "size": 32.0,
+    "pnl": 98.6514768017,
+    "status": "Closed"
+  },
+  {
+    "symbol": "AMZN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-26",
+    "entry_price": 181.8071407396,
+    "exit_price": 187.8300018311,
+    "size": 10.0,
+    "pnl": 60.2286109146,
+    "status": "Closed"
+  },
+  {
+    "symbol": "AMZN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-01-04",
+    "entry_price": 209.6022742631,
+    "exit_price": 224.1900024414,
+    "size": 12.5,
+    "pnl": 182.3466022293,
+    "status": "Closed"
+  },
+  {
+    "symbol": "AMZN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 211.4151009839,
+    "exit_price": 195.5399932861,
+    "size": 40.5,
+    "pnl": -642.9418617595,
+    "status": "Open"
+  },
+  {
+    "symbol": "COIN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-16",
+    "entry_price": 246.8782633906,
+    "exit_price": 161.5,
+    "size": 12.0,
+    "pnl": -1024.539160687,
+    "status": "Closed"
+  },
+  {
+    "symbol": "COIN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-05",
+    "entry_price": 246.8782633906,
+    "exit_price": 320.5700073242,
+    "size": 18.0,
+    "pnl": 1326.4513908055,
+    "status": "Closed"
+  },
+  {
+    "symbol": "COIN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 246.8782633906,
+    "exit_price": 189.75,
+    "size": 62.0,
+    "pnl": -3541.9523302161,
+    "status": "Open"
+  },
+  {
+    "symbol": "CRWD",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 329.1295671735,
+    "exit_price": 375.049987793,
+    "size": 70.0,
+    "pnl": 3214.4294433594,
+    "status": "Open"
+  },
+  {
+    "symbol": "CVX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-04-09",
+    "entry_price": 148.1404418945,
+    "exit_price": 155.2814788818,
+    "size": 25.0,
+    "pnl": 178.5259246826,
+    "status": "Closed"
+  },
+  {
+    "symbol": "CVX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-06",
+    "entry_price": 148.9395187649,
+    "exit_price": 147.580947876,
+    "size": 27.0,
+    "pnl": -36.6814140004,
+    "status": "Closed"
+  },
+  {
+    "symbol": "CVX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 150.2281600756,
+    "exit_price": 164.0500030518,
+    "size": 193.0,
+    "pnl": 2667.6156943959,
+    "status": "Open"
+  },
+  {
+    "symbol": "DDOG",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-04-09",
+    "entry_price": 123.4400024414,
+    "exit_price": 125.4400024414,
+    "size": 47.0,
+    "pnl": 94.0,
+    "status": "Closed"
+  },
+  {
+    "symbol": "DDOG",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-06",
+    "entry_price": 122.3616015625,
+    "exit_price": 107.1999969482,
+    "size": 37.0,
+    "pnl": -560.9793707275,
+    "status": "Closed"
+  },
+  {
+    "symbol": "DDOG",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-16",
+    "entry_price": 122.3616015625,
+    "exit_price": 126.0,
+    "size": 13.0,
+    "pnl": 47.2991796875,
+    "status": "Closed"
+  },
+  {
+    "symbol": "DDOG",
+    "entry_date": "2024-10-16",
+    "exit_date": "2024-12-15",
+    "entry_price": 126.0,
+    "exit_price": 153.0299987793,
+    "size": -13.0,
+    "pnl": -351.3899841309,
+    "status": "Closed"
+  },
+  {
+    "symbol": "DDOG",
+    "entry_date": "2024-10-16",
+    "exit_date": "2025-03-19",
+    "entry_price": 138.3897213406,
+    "exit_price": 104.4300003052,
+    "size": -18.0,
+    "pnl": 611.2749786377,
+    "status": "Open"
+  },
+  {
+    "symbol": "GOOGL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-28",
+    "entry_price": 148.0322723389,
+    "exit_price": 181.4913330078,
+    "size": 22.0,
+    "pnl": 736.0993347168,
+    "status": "Closed"
+  },
+  {
+    "symbol": "GOOGL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-26",
+    "entry_price": 148.0322723389,
+    "exit_price": 164.8908996582,
+    "size": 12.0,
+    "pnl": 202.303527832,
+    "status": "Closed"
+  },
+  {
+    "symbol": "GOOGL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-02-23",
+    "entry_price": 148.0322723389,
+    "exit_price": 179.4533233643,
+    "size": 11.0,
+    "pnl": 345.6315612793,
+    "status": "Closed"
+  },
+  {
+    "symbol": "GOOGL",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 158.8681067105,
+    "exit_price": 163.8899993896,
+    "size": 58.0,
+    "pnl": 291.2697753906,
+    "status": "Open"
+  },
+  {
+    "symbol": "INTC",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-05",
+    "entry_price": 28.0601067369,
+    "exit_price": 23.3199996948,
+    "size": -85.0,
+    "pnl": 402.9090985742,
+    "status": "Closed"
+  },
+  {
+    "symbol": "INTC",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 28.0601067369,
+    "exit_price": 24.1200008392,
+    "size": -982.0,
+    "pnl": 3869.1839914831,
+    "status": "Open"
+  },
+  {
+    "symbol": "JNJ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-03-30",
+    "entry_price": 150.9184112549,
+    "exit_price": 153.2728881836,
+    "size": 13.0,
+    "pnl": 30.6082000732,
+    "status": "Closed"
+  },
+  {
+    "symbol": "JNJ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-18",
+    "entry_price": 150.9184112549,
+    "exit_price": 142.2634124756,
+    "size": 28.0,
+    "pnl": -242.3399658203,
+    "status": "Closed"
+  },
+  {
+    "symbol": "JNJ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-01-04",
+    "entry_price": 155.1090508712,
+    "exit_price": 143.0449829102,
+    "size": 13.0,
+    "pnl": -156.8328834935,
+    "status": "Closed"
+  },
+  {
+    "symbol": "JNJ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-02-23",
+    "entry_price": 151.2728755482,
+    "exit_price": 162.3000030518,
+    "size": 36.0,
+    "pnl": 396.9765901264,
+    "status": "Closed"
+  },
+  {
+    "symbol": "JNJ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 151.2728755482,
+    "exit_price": 162.9900054932,
+    "size": 87.0,
+    "pnl": 1019.3903052079,
+    "status": "Open"
+  },
+  {
+    "symbol": "JPM",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-15",
+    "entry_price": 202.6102244059,
+    "exit_price": 244.0495758057,
+    "size": -16.0,
+    "pnl": -663.0296223958,
+    "status": "Closed"
+  },
+  {
+    "symbol": "JPM",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 202.6102244059,
+    "exit_price": 239.1100006104,
+    "size": -110.0,
+    "pnl": -4014.975382487,
+    "status": "Open"
+  },
+  {
+    "symbol": "KO",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-07-18",
+    "entry_price": 59.8322261942,
+    "exit_price": 63.788028717,
+    "size": 94.0,
+    "pnl": 371.8454371485,
+    "status": "Closed"
+  },
+  {
+    "symbol": "KO",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-26",
+    "entry_price": 59.8322261942,
+    "exit_price": 70.3434295654,
+    "size": 22.0,
+    "pnl": 231.2464741674,
+    "status": "Closed"
+  },
+  {
+    "symbol": "KO",
+    "entry_date": "2024-09-26",
+    "exit_date": "2025-01-14",
+    "entry_price": 70.3434295654,
+    "exit_price": 61.5855293274,
+    "size": -32.0,
+    "pnl": 280.2528076172,
+    "status": "Closed"
+  },
+  {
+    "symbol": "KO",
+    "entry_date": "2024-09-26",
+    "exit_date": "2025-02-23",
+    "entry_price": 70.3434295654,
+    "exit_price": 70.8273239136,
+    "size": -2.0,
+    "pnl": -0.9677886963,
+    "status": "Closed"
+  },
+  {
+    "symbol": "KO",
+    "entry_date": "2025-02-23",
+    "exit_date": "2025-03-19",
+    "entry_price": 70.8273239136,
+    "exit_price": 69.2799987793,
+    "size": 54.0,
+    "pnl": -83.555557251,
+    "status": "Open"
+  },
+  {
+    "symbol": "META",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-28",
+    "entry_price": 486.9180055276,
+    "exit_price": 502.8860168457,
+    "size": -7.0,
+    "pnl": -111.7760792268,
+    "status": "Closed"
+  },
+  {
+    "symbol": "META",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-07-28",
+    "entry_price": 486.9180055276,
+    "exit_price": 464.4679870605,
+    "size": -8.0,
+    "pnl": 179.6001477364,
+    "status": "Closed"
+  },
+  {
+    "symbol": "META",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-15",
+    "entry_price": 486.9180055276,
+    "exit_price": 553.1412963867,
+    "size": -10.0,
+    "pnl": -662.2329085912,
+    "status": "Closed"
+  },
+  {
+    "symbol": "META",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 508.2674827518,
+    "exit_price": 584.0599975586,
+    "size": -17.0,
+    "pnl": -1288.4727517152,
+    "status": "Open"
+  },
+  {
+    "symbol": "MRNA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-08",
+    "entry_price": 103.0800018311,
+    "exit_price": 151.0099945068,
+    "size": -39.0,
+    "pnl": -1869.2697143555,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MRNA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-08-07",
+    "entry_price": 105.4721326984,
+    "exit_price": 81.5500030518,
+    "size": -49.0,
+    "pnl": 1172.1843526871,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MRNA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-16",
+    "entry_price": 105.4721326984,
+    "exit_price": 57.4599990845,
+    "size": -69.0,
+    "pnl": 3312.8372193634,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MRNA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-26",
+    "entry_price": 105.4721326984,
+    "exit_price": 53.0900001526,
+    "size": -4.0,
+    "pnl": 209.5285301834,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MRNA",
+    "entry_date": "2024-10-26",
+    "exit_date": "2025-03-19",
+    "entry_price": 41.547191003,
+    "exit_price": 33.3199996948,
+    "size": 235.0,
+    "pnl": -1933.389957428,
+    "status": "Open"
+  },
+  {
+    "symbol": "MSFT",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-15",
+    "entry_price": 422.0776163737,
+    "exit_price": 413.3421936035,
+    "size": -4.0,
+    "pnl": 34.9416910807,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MSFT",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-02-23",
+    "entry_price": 419.5406965667,
+    "exit_price": 408.2099914551,
+    "size": -9.0,
+    "pnl": 101.9763460047,
+    "status": "Closed"
+  },
+  {
+    "symbol": "MSFT",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 419.5406965667,
+    "exit_price": 387.8200073242,
+    "size": -33.5,
+    "pnl": 1062.6430896235,
+    "status": "Open"
+  },
+  {
+    "symbol": "NVDA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-05",
+    "entry_price": 105.7484191141,
+    "exit_price": 145.046661377,
+    "size": 41.0,
+    "pnl": 1611.2279327769,
+    "status": "Closed"
+  },
+  {
+    "symbol": "NVDA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-01-14",
+    "entry_price": 109.9433898795,
+    "exit_price": 131.7478790283,
+    "size": 15.0,
+    "pnl": 327.0673372327,
+    "status": "Closed"
+  },
+  {
+    "symbol": "NVDA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 111.4396318204,
+    "exit_price": 117.5199966431,
+    "size": 229.0,
+    "pnl": 1392.4035443825,
+    "status": "Open"
+  },
+  {
+    "symbol": "PEP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-08",
+    "entry_price": 167.7981109619,
+    "exit_price": 168.3142547607,
+    "size": -23.0,
+    "pnl": -11.871307373,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PEP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-28",
+    "entry_price": 167.7981109619,
+    "exit_price": 162.3016204834,
+    "size": -36.0,
+    "pnl": 197.8736572266,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PEP",
+    "entry_date": "2024-10-26",
+    "exit_date": "2025-02-13",
+    "entry_price": 161.1143563663,
+    "exit_price": 144.5800018311,
+    "size": -7.0,
+    "pnl": 115.7404817469,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PEP",
+    "entry_date": "2024-10-26",
+    "exit_date": "2025-03-19",
+    "entry_price": 161.1143563663,
+    "exit_price": 148.1100006104,
+    "size": -78.0,
+    "pnl": 1014.339748966,
+    "status": "Open"
+  },
+  {
+    "symbol": "PG",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-15",
+    "entry_price": 165.9193288258,
+    "exit_price": 168.5124511719,
+    "size": 35.0,
+    "pnl": 90.7592821121,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PG",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 166.6857202915,
+    "exit_price": 168.5700073242,
+    "size": 94.0,
+    "pnl": 177.1229810715,
+    "status": "Open"
+  },
+  {
+    "symbol": "PLTR",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-04-09",
+    "entry_price": 24.3772411401,
+    "exit_price": 22.8099994659,
+    "size": 175.0,
+    "pnl": -274.2672929819,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PLTR",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-15",
+    "entry_price": 26.4107400351,
+    "exit_price": 76.0699996948,
+    "size": 26.0,
+    "pnl": 1291.1407511527,
+    "status": "Closed"
+  },
+  {
+    "symbol": "PLTR",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 28.5141713829,
+    "exit_price": 86.0999984741,
+    "size": 696.0,
+    "pnl": 40079.7356555224,
+    "status": "Open"
+  },
+  {
+    "symbol": "RBLX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-18",
+    "entry_price": 37.8199996948,
+    "exit_price": 35.9000015259,
+    "size": 111.0,
+    "pnl": -213.1197967529,
+    "status": "Closed"
+  },
+  {
+    "symbol": "RBLX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-05",
+    "entry_price": 39.233252154,
+    "exit_price": 51.1800003052,
+    "size": 39.0,
+    "pnl": 465.9231778963,
+    "status": "Closed"
+  },
+  {
+    "symbol": "RBLX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-25",
+    "entry_price": 39.233252154,
+    "exit_price": 59.5600013733,
+    "size": 100.0,
+    "pnl": 2032.6749219304,
+    "status": "Closed"
+  },
+  {
+    "symbol": "RBLX",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 41.8153898321,
+    "exit_price": 58.0999984741,
+    "size": 341.0,
+    "pnl": 5553.0515469323,
+    "status": "Open"
+  },
+  {
+    "symbol": "RIVN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-07-18",
+    "entry_price": 11.0916507708,
+    "exit_price": 16.8999996185,
+    "size": 118.0,
+    "pnl": 685.3851640293,
+    "status": "Closed"
+  },
+  {
+    "symbol": "RIVN",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 12.1422344909,
+    "exit_price": 11.3599996567,
+    "size": 1949.0,
+    "pnl": -1524.5756919453,
+    "status": "Open"
+  },
+  {
+    "symbol": "SHOP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-11-15",
+    "entry_price": 73.1414693286,
+    "exit_price": 108.4899978638,
+    "size": 18.0,
+    "pnl": 636.2735136339,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SHOP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-15",
+    "entry_price": 73.1414693286,
+    "exit_price": 114.6299972534,
+    "size": 17.0,
+    "pnl": 705.3049747227,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SHOP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-01-24",
+    "entry_price": 73.1414693286,
+    "exit_price": 107.6800003052,
+    "size": 18.0,
+    "pnl": 621.6935575792,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SHOP",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 73.1414693286,
+    "exit_price": 101.5400009155,
+    "size": 233.0,
+    "pnl": 6616.8578597649,
+    "status": "Open"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-08",
+    "entry_price": 163.0399932861,
+    "exit_price": 131.2100067139,
+    "size": -30.0,
+    "pnl": 954.899597168,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-10-26",
+    "entry_price": 135.7930847921,
+    "exit_price": 116.0400009155,
+    "size": -51.0,
+    "pnl": 1007.4072777077,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-12-05",
+    "entry_price": 135.7930847921,
+    "exit_price": 183.0599975586,
+    "size": -30.0,
+    "pnl": -1418.0073829933,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-12-05",
+    "exit_date": "2024-12-15",
+    "entry_price": 183.0599975586,
+    "exit_price": 167.6699981689,
+    "size": 2.0,
+    "pnl": -30.7799987793,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-12-15",
+    "exit_date": "2025-02-23",
+    "entry_price": 165.3752626118,
+    "exit_price": 177.8899993896,
+    "size": -11.0,
+    "pnl": -137.6621045564,
+    "status": "Closed"
+  },
+  {
+    "symbol": "SNOW",
+    "entry_date": "2024-12-15",
+    "exit_date": "2025-03-19",
+    "entry_price": 165.3752626118,
+    "exit_price": 155.9600067139,
+    "size": -46.0,
+    "pnl": 433.1017713045,
+    "status": "Open"
+  },
+  {
+    "symbol": "TSLA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-26",
+    "entry_price": 181.9886051301,
+    "exit_price": 254.2200012207,
+    "size": -23.0,
+    "pnl": -1661.3221100838,
+    "status": "Closed"
+  },
+  {
+    "symbol": "TSLA",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 210.3654816032,
+    "exit_price": 235.8600006104,
+    "size": -88.0,
+    "pnl": -2243.517672631,
+    "status": "Open"
+  },
+  {
+    "symbol": "U",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-16",
+    "entry_price": 27.0968048656,
+    "exit_price": 20.2999992371,
+    "size": 295.0,
+    "pnl": -2005.0576604289,
+    "status": "Closed"
+  },
+  {
+    "symbol": "U",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-09-26",
+    "entry_price": 27.0968048656,
+    "exit_price": 22.3400001526,
+    "size": 179.0,
+    "pnl": -851.4680436351,
+    "status": "Closed"
+  },
+  {
+    "symbol": "U",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 26.2251209907,
+    "exit_price": 21.5599994659,
+    "size": 614.0,
+    "pnl": -2864.3846162181,
+    "status": "Open"
+  },
+  {
+    "symbol": "VZ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-04-09",
+    "entry_price": 37.5819244385,
+    "exit_price": 38.8758964539,
+    "size": -154.0,
+    "pnl": -199.2716903687,
+    "status": "Closed"
+  },
+  {
+    "symbol": "VZ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-04-29",
+    "entry_price": 37.5819244385,
+    "exit_price": 38.1619644165,
+    "size": -104.0,
+    "pnl": -60.3241577148,
+    "status": "Closed"
+  },
+  {
+    "symbol": "VZ",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-08-07",
+    "entry_price": 38.7827238956,
+    "exit_price": 38.9703178406,
+    "size": -59.0,
+    "pnl": -11.0680427551,
+    "status": "Closed"
+  },
+  {
+    "symbol": "VZ",
+    "entry_date": "2024-08-07",
+    "exit_date": "2025-03-19",
+    "entry_price": 41.5867693205,
+    "exit_price": 43.9399986267,
+    "size": 255.5,
+    "pnl": 601.250087738,
+    "status": "Open"
+  },
+  {
+    "symbol": "WMT",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-06-18",
+    "entry_price": 60.6122288858,
+    "exit_price": 67.2588424683,
+    "size": -89.0,
+    "pnl": -591.5486088414,
+    "status": "Closed"
+  },
+  {
+    "symbol": "WMT",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 69.1851846539,
+    "exit_price": 86.3300018311,
+    "size": -425.0,
+    "pnl": -7286.5473002772,
+    "status": "Open"
+  },
+  {
+    "symbol": "XOM",
+    "entry_date": "2024-03-20",
+    "exit_date": "2024-08-17",
+    "entry_price": 110.7717812008,
+    "exit_price": 116.1678085327,
+    "size": 51.0,
+    "pnl": 275.197393926,
+    "status": "Closed"
+  },
+  {
+    "symbol": "XOM",
+    "entry_date": "2024-03-20",
+    "exit_date": "2025-03-19",
+    "entry_price": 114.0841079051,
+    "exit_price": 115.4100036621,
+    "size": 229.0,
+    "pnl": 303.6301283518,
+    "status": "Open"
+  }
+]
