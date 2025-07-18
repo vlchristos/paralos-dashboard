@@ -7,3 +7,8 @@ export type TodayStock = {
   name: string;
   sector: string;
 };
+
+export type Sector = {
+  id: string;
+  name: string;
+};

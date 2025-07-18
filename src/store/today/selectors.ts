@@ -23,3 +23,20 @@ export const selectActivePortfolioStocks = createSelector(
     );
   },
 );
+
+export const selectSectorsByActivePortfolio = createSelector(
+  [selectActivePortfolioStocks],
+  (activePortfolioStocks) => {
+    const sectors = new Set<string>();
+    activePortfolioStocks.forEach((stock) => {
+      if (stock.sector) {
+        sectors.add(stock.sector);
+      }
+    });
+    const sectorsArray = Array.from(sectors);
+    return sectorsArray.map((sector) => ({
+      name: sector,
+      id: sector.toLowerCase().replace(/\s+/g, "-"),
+    }));
+  },
+);

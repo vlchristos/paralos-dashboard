@@ -16,6 +16,7 @@ function* loadTodayStocks() {
     while (portfoliosRawData.length === 0) {
       // Select the portfolio raw data from the state
       const rawData: PortfolioRawData[] = yield select(selectPortfolioRawData);
+
       if (rawData) {
         portfoliosRawData.push(...rawData);
       } else {
