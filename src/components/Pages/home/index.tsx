@@ -38,7 +38,7 @@ export default function Home() {
             </Typography>
             <StocksFilters />
           </Box>
-          <Box component={Paper} p={2}>
+          <Box width="100%" overflow="hidden" component={Paper} p={2}>
             <StocksTable stocks={filteredStocks} />
           </Box>
         </>
