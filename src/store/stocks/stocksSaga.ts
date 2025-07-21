@@ -1,15 +1,15 @@
 import { put, select, takeLatest } from "redux-saga/effects";
-import { getTodayStocks, setTodayStocks } from "./todaySlice";
 import todayStocksRawData from "../../raw_data/today.json";
 import type { PortfolioRawData } from "../../types/portfolio/portfolio";
 import { selectPortfolioRawData } from "../portfolios/selectors";
 import type { Stock } from "../../types/today/today";
+import { getAvailableStocks, setAvailableStocks } from "./stocksSlice";
 
-function* loadTodayStocks() {
+function* loadAvailableStocks() {
   try {
     // Simulate an API call
     yield new Promise((resolve) => setTimeout(resolve, 2000));
-    let todayStocks = todayStocksRawData;
+    let stocks = todayStocksRawData;
 
     const portfoliosRawData: PortfolioRawData[] = [];
 
@@ -25,7 +25,7 @@ function* loadTodayStocks() {
       }
     }
 
-    todayStocks = todayStocks.map((stock) => {
+    stocks = stocks.map((stock) => {
       const portfolio = portfoliosRawData.find(
         (portfolio) => portfolio.symbol === stock.symbol,
       );
@@ -37,12 +37,12 @@ function* loadTodayStocks() {
       };
     });
 
-    yield put(setTodayStocks(todayStocks as Stock[]));
+    yield put(setAvailableStocks(stocks as Stock[]));
   } catch (error) {
     console.error("Failed to load today's stocks:", error);
   }
 }
 
-export default function* todaySaga() {
-  yield takeLatest(getTodayStocks, loadTodayStocks);
+export default function* stocksSaga() {
+  yield takeLatest(getAvailableStocks, loadAvailableStocks);
 }

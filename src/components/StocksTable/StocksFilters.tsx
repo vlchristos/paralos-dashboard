@@ -1,5 +1,6 @@
 import {
   Box,
+  debounce,
   FormControl,
   InputAdornment,
   InputLabel,
@@ -8,48 +9,51 @@ import {
   TextField,
   type SelectChangeEvent,
 } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../store";
-import {
-  selectSectorsByActivePortfolio,
-  selectSelectedSector,
-} from "../../store/today/selectors";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import type { Sector } from "../../types/today/today";
-import { setSearchTerm, setSelectedSector } from "../../store/today/todaySlice";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { debounce } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const debouncedSearch = debounce((dispatch, searchTerm: string) => {
-  dispatch(setSearchTerm(searchTerm.trim()));
+export type StocksFiltersProps = {
+  sectors: Sector[];
+  selectedSector: string;
+  searchTerm: string;
+  handleSectorChange: (sectorId: string) => void;
+  handleSearchChange: (searchTerm: string) => void;
+  handleClearSearch: () => void;
+};
+
+const debouncedSearch = debounce((handleSearchChange, searchTerm: string) => {
+  handleSearchChange(searchTerm.trim());
 }, 300);
 
-export default function StocksFilters() {
-  const dispatch = useAppDispatch();
-  const selectedSector: string = useAppSelector(selectSelectedSector);
-  const sectors: Sector[] = useAppSelector(selectSectorsByActivePortfolio);
-  const searchTerm: string = useAppSelector((state) => state.today.searchTerm);
+export default function StocksFilters({
+  sectors,
+  selectedSector,
+  searchTerm,
+  handleSearchChange,
+  handleSectorChange,
+  handleClearSearch,
+}: StocksFiltersProps) {
   const [term, setTerm] = useState(searchTerm);
 
-  function handleSectorChange(event: SelectChangeEvent) {
+  function onSectorChange(event: SelectChangeEvent) {
     const sectorId = event.target.value;
-    dispatch(setSelectedSector(sectorId));
+    handleSectorChange(sectorId);
   }
 
-  function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
+  function onSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
     const searchTerm = event.target.value;
     setTerm(searchTerm);
   }
 
-  function handleClearSearch() {
+  function onClearSearch() {
     setTerm("");
-    dispatch(setSearchTerm(""));
+    handleClearSearch();
   }
 
   useEffect(() => {
-    if (term !== "") {
-      debouncedSearch(dispatch, term);
-    }
+    debouncedSearch(handleSearchChange, term);
   }, [term]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -65,7 +69,7 @@ export default function StocksFilters() {
           id="search"
           placeholder="Search stocks"
           variant="outlined"
-          onChange={handleSearchChange}
+          onChange={onSearchChange}
           value={term}
           slotProps={{
             input: {
@@ -76,9 +80,9 @@ export default function StocksFilters() {
               ),
               endAdornment: (
                 <InputAdornment position="end">
-                  {searchTerm && (
+                  {term && (
                     <CloseOutlinedIcon
-                      onClick={handleClearSearch}
+                      onClick={onClearSearch}
                       style={{ cursor: "pointer" }}
                     />
                   )}
@@ -96,7 +100,7 @@ export default function StocksFilters() {
             id="sector-select"
             value={selectedSector}
             label="Sector"
-            onChange={handleSectorChange}
+            onChange={onSectorChange}
           >
             <MenuItem value="">All</MenuItem>
             {sectors.map((sector) => (

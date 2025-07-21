@@ -1,4 +1,4 @@
-export type TodayStock = {
+export type Stock = {
   symbol: string;
   quantity: number;
   price: number;

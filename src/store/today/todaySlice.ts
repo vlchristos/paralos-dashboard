@@ -1,8 +1,8 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { TodayStock } from "../../types/today/today";
+import type { Stock } from "../../types/today/today";
 
 type TodayState = {
-  stocks: TodayStock[];
+  stocks: Stock[];
   selectedSector: string;
   searchTerm: string;
 };
@@ -18,10 +18,7 @@ export const todayReducer = createSlice({
   initialState,
   reducers: {
     getTodayStocks: () => {},
-    setTodayStocks: (
-      state: TodayState,
-      action: PayloadAction<TodayStock[]>,
-    ) => {
+    setTodayStocks: (state: TodayState, action: PayloadAction<Stock[]>) => {
       state.stocks = action.payload;
     },
     setSelectedSector: (state: TodayState, action: PayloadAction<string>) => {

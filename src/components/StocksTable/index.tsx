@@ -1,5 +1,5 @@
 import { Avatar, Box, CircularProgress, Typography } from "@mui/material";
-import type { TodayStock } from "../../types/today/today";
+import type { Stock } from "../../types/today/today";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
 type StocksTableProps = {
-  stocks: TodayStock[];
+  stocks: Stock[];
 };
 
 function createData(
