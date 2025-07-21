@@ -13,8 +13,9 @@ import {
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShowChartOutlinedIcon from "@mui/icons-material/ShowChartOutlined";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
-import { useAppSelector } from "../store";
+import { useAppDispatch, useAppSelector } from "../store";
 import { Link } from "react-router";
+import { toggleMainMenu } from "../store/global/globalSlice";
 
 const DRAWER_WIDTH = 240;
 const MENU_ITEMS = [
@@ -27,11 +28,18 @@ const MENU_ITEMS = [
 ];
 
 export default function AppDrawer() {
-  const isMobile = useMediaQuery("(max-width: 720px)"); // Example breakpoint for responsive design
+  const dispatch = useAppDispatch();
+  const isMobile = useMediaQuery("(max-width: 720px)");
   const drawerOpen = useAppSelector((state) => state.global.mainMenuOpen);
+
+  function handleDrawerClose() {
+    dispatch(toggleMainMenu());
+  }
+
   return (
     <Drawer
       open={drawerOpen}
+      onClose={handleDrawerClose}
       variant={isMobile ? "temporary" : "permanent"}
       sx={{
         width: drawerOpen ? DRAWER_WIDTH : 0,

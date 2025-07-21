@@ -25,7 +25,13 @@ export default function PortfolioDetails() {
   return (
     <Card>
       <CardContent>
-        <Box display="flex" justifyContent="space-between" alignItems="top">
+        <Box
+          display="flex"
+          flexDirection={{ xs: "column", sm: "row" }}
+          gap={2}
+          justifyContent="space-between"
+          alignItems="top"
+        >
           <Box>
             <Typography variant="subtitle2" color="textSecondary">
               Selected Portfolio
@@ -34,11 +40,17 @@ export default function PortfolioDetails() {
               {selectedPortfolio ? selectedPortfolio.name : "–"}
             </Typography>
           </Box>
-          <Box display="flex" gap={2} alignItems="center">
+          <Box
+            display={{ xs: "none", sm: "flex" }}
+            flexGrow={{ xs: 1, sm: 0 }}
+            gap={2}
+            alignItems="center"
+          >
             <Button
               size="small"
               variant={compare ? "contained" : "text"}
               onClick={handleCompare}
+              fullWidth
             >
               Compare
             </Button>
@@ -51,6 +63,24 @@ export default function PortfolioDetails() {
         </Box>
         <Divider sx={{ mb: 2 }} />
         {compare ? <PortfolioGraph /> : <PortfolioGraphSimple />}
+        <Box
+          display={{ xs: "flex", sm: "none" }}
+          flexGrow={{ xs: 1, sm: 0 }}
+          gap={2}
+          alignItems="center"
+          px={1}
+          py={2}
+        >
+          <Button
+            size="small"
+            variant={compare ? "contained" : "text"}
+            onClick={handleCompare}
+            fullWidth
+          >
+            Compare
+          </Button>
+          <PortfolioSelector />
+        </Box>
       </CardContent>
     </Card>
   );
