@@ -20,14 +20,14 @@ const DRAWER_WIDTH = 240;
 const MENU_ITEMS = [
   { text: "Stocks", icon: <ShowChartOutlinedIcon />, url: "/stocks" },
   {
-    text: "Portfolio",
+    text: "Trades",
     icon: <BusinessCenterOutlinedIcon />,
     url: "/portfolio",
   },
 ];
 
 export default function AppDrawer() {
-  const isMobile = useMediaQuery("(max-width: 600px)"); // Example breakpoint for responsive design
+  const isMobile = useMediaQuery("(max-width: 720px)"); // Example breakpoint for responsive design
   const drawerOpen = useAppSelector((state) => state.global.mainMenuOpen);
   return (
     <Drawer

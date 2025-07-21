@@ -70,11 +70,19 @@ export default function StocksTable({ stocks }: StocksTableProps) {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <Box display="flex" alignItems="center" gap={1}>
+                <Box
+                  display="flex"
+                  alignItems={{ xs: "start", md: "center" }}
+                  gap={1}
+                >
                   <Avatar
                     alt={row.symbol}
                     src={`https://img.logo.dev/ticker/${row.symbol}?token=pk_Tx10ZcjSRomUlLolhTAi0w&size=48&retina=true`}
-                    sx={{ width: 48, height: 48, marginRight: 1 }}
+                    sx={{
+                      width: { xs: 24, md: 48 },
+                      height: { xs: 24, md: 48 },
+                      marginRight: 1,
+                    }}
                   />
                   <Box>
                     <Typography variant="body1">{row.symbol}</Typography>
