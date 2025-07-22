@@ -8,7 +8,7 @@ import { getAvailableStocks, setAvailableStocks } from "./stocksSlice";
 function* loadAvailableStocks() {
   try {
     // Simulate an API call
-    yield new Promise((resolve) => setTimeout(resolve, 2000));
+    yield new Promise((resolve) => setTimeout(resolve, 1000));
     let stocks = todayStocksRawData;
 
     const portfoliosRawData: PortfolioRawData[] = [];

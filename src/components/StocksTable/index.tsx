@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 
 type StocksTableProps = {
   stocks: Stock[];
+  noData?: boolean;
 };
 
 function createData(
@@ -27,7 +28,7 @@ function createData(
   };
 }
 
-export default function StocksTable({ stocks }: StocksTableProps) {
+export default function StocksTable({ stocks, noData }: StocksTableProps) {
   const rows = stocks.map((stock) =>
     createData(
       stock.symbol,
@@ -37,6 +38,21 @@ export default function StocksTable({ stocks }: StocksTableProps) {
       Number(stock.daily_pnl.toFixed(2)),
     ),
   );
+
+  if (noData) {
+    return (
+      <Box
+        height={300}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Typography variant="body1" color="textSecondary">
+          No data available
+        </Typography>
+      </Box>
+    );
+  }
 
   if (rows.length === 0) {
     return (

@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
 import AppLayout from "../../AppLayout";
 import { useAppDispatch, useAppSelector } from "../../../store";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import {
   getTodayStocks,
   setSearchTerm,
@@ -13,7 +13,7 @@ import {
   selectSectorsByActivePortfolio,
   selectActiveSector,
 } from "../../../store/today/selectors";
-import type { Stock } from "../../../types/today/today";
+import type { Sector, Stock } from "../../../types/today/today";
 import PortfolioDetails from "./PortfolioDetails";
 import StocksFilters from "../../StocksTable/StocksFilters";
 
@@ -22,7 +22,7 @@ export default function Home() {
   const selectedSector: string = useAppSelector(selectActiveSector);
   const filteredStocks: Stock[] | undefined =
     useAppSelector(selectFilteredStocks);
-  const sectors = useAppSelector(selectSectorsByActivePortfolio);
+  const sectors: Sector[] = useAppSelector(selectSectorsByActivePortfolio);
   const searchTerm: string = useAppSelector((state) => state.today.searchTerm);
 
   function handleSectorChange(sectorId: string) {
@@ -36,6 +36,14 @@ export default function Home() {
   function handleClearSearch() {
     dispatch(setSearchTerm(""));
   }
+
+  const noData = useMemo(
+    () =>
+      filteredStocks &&
+      filteredStocks.length === 0 &&
+      (searchTerm !== "" || selectedSector !== ""),
+    [filteredStocks, selectedSector, searchTerm],
+  );
 
   useEffect(() => {
     dispatch(getTodayStocks());
@@ -69,7 +77,7 @@ export default function Home() {
             />
           </Box>
           <Box width="100%" overflow="hidden" component={Paper} p={2}>
-            <StocksTable stocks={filteredStocks} />
+            <StocksTable stocks={filteredStocks} noData={noData} />
           </Box>
         </>
       )}
