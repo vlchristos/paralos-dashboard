@@ -12,7 +12,8 @@ export const selectActiveStock = (state: RootState) =>
 export const selectActiveSector = (state: RootState) =>
   state.stocks.selectedSector;
 
-export const selectActivePeriod = (state: RootState) => state.stocks.period;
+export const selectActivePeriod = (state: RootState) =>
+  state.stocks.periodMonths;
 
 export const selectActiveStockData = (state: RootState) =>
   state.stocks.selectedStockData;
@@ -77,11 +78,7 @@ export const selectActiveStockDetails = createSelector(
     const stock = availableStocks.find(
       (stock) => stock.symbol === selectedStock,
     );
-    return {
-      symbol: stock?.symbol || "",
-      name: stock?.name || "",
-      sector: stock?.sector || "",
-    };
+    return stock || null;
   },
 );
 
@@ -96,22 +93,6 @@ export const selectActiveStockDataByPeriod = createSelector(
       return activeStockData; // if period is 'max', return all data
     }
 
-    let periodMonths: number;
-
-    switch (activePeriod) {
-      case "1m":
-        periodMonths = 1;
-        break;
-      case "6m":
-        periodMonths = 6;
-        break;
-      case "1y":
-        periodMonths = 12;
-        break;
-      default:
-        return []; // if no valid period, return empty array
-    }
-
     const mostRecent = new Date(
       activeStockData[activeStockData.length - 1].date,
     );
@@ -122,7 +103,7 @@ export const selectActiveStockDataByPeriod = createSelector(
       return pastDate;
     }
 
-    const pastDate = getPastDate(periodMonths);
+    const pastDate = getPastDate(Number(activePeriod));
 
     return activeStockData.filter((data) => {
       const dataDate = new Date(data.date);

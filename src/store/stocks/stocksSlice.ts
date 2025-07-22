@@ -3,13 +3,13 @@ import type { Stock } from "../../types/today/today";
 import type { StockData } from "../../types/stocks/stocks";
 
 export const PERIODS = [
-  { value: "1m", label: "1M" },
-  { value: "6m", label: "6M" },
-  { value: "1y", label: "1Y" },
+  { value: "1", label: "1M" },
+  { value: "6", label: "6M" },
+  { value: "12", label: "1Y" },
   { value: "max", label: "Max" },
 ];
 
-export type Period = "1m" | "6m" | "1y" | "max";
+export type Period = "1" | "6" | "1" | "max";
 
 type StocksState = {
   availableStocks: Stock[];
@@ -17,7 +17,7 @@ type StocksState = {
   searchTerm: string;
   selectedStock: string;
   selectedStockData: StockData[];
-  period: Period;
+  periodMonths: Period;
 };
 
 export const initialState: StocksState = {
@@ -26,7 +26,7 @@ export const initialState: StocksState = {
   searchTerm: "",
   selectedStock: "",
   selectedStockData: [],
-  period: "1m",
+  periodMonths: "1",
 };
 
 export const stocksReducer = createSlice({
@@ -56,7 +56,7 @@ export const stocksReducer = createSlice({
       state.selectedStockData = action.payload;
     },
     setPeriod: (state: StocksState, action: PayloadAction<Period>) => {
-      state.period = action.payload;
+      state.periodMonths = action.payload;
     },
     clearSelectedStockData: (state: StocksState) => {
       state.selectedStock = "";
