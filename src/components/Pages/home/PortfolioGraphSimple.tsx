@@ -1,11 +1,6 @@
 import { useAppSelector } from "../../../store";
 import { selectActivePortfolioHistory } from "../../../store/portfolios/selectors";
-import { ChartContainer } from "@mui/x-charts/ChartContainer";
-import {
-  LinePlot,
-  MarkPlot,
-  lineElementClasses,
-} from "@mui/x-charts/LineChart";
+import { LineChart } from "@mui/x-charts/LineChart";
 import type { PortfolioHistoricData } from "../../../types/portfolio/portfolio";
 import { Box, LinearProgress } from "@mui/material";
 
@@ -28,12 +23,11 @@ export default function PortfolioGraphSimple() {
   }
 
   return (
-    <ChartContainer
+    <LineChart
       height={300}
       series={[
         {
           showMark: false,
-          type: "line",
           data: history.map((h) => h.total_value),
         },
       ]}
@@ -42,18 +36,26 @@ export default function PortfolioGraphSimple() {
           scaleType: "point",
           data: history.map((h) => new Date(h.date)),
           position: "none",
+          valueFormatter: (value: Date) => {
+            return new Intl.DateTimeFormat("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            }).format(value);
+          },
         },
       ]}
-      yAxis={[{ position: "none" }]}
-      sx={{
-        [`& .${lineElementClasses.root}`]: {
-          strokeWidth: 2,
+      yAxis={[
+        {
+          position: "none",
+          valueFormatter: (value: number) => {
+            return new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+            }).format(value);
+          },
         },
-      }}
-      disableAxisListener
-    >
-      <LinePlot />
-      <MarkPlot />
-    </ChartContainer>
+      ]}
+    />
   );
 }
