@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
 import AppLayout from "../../AppLayout";
 import { useAppDispatch, useAppSelector } from "../../../store";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import StocksTable from "../../StocksTable";
 import type { Stock } from "../../../types/today/today";
 import StocksFilters from "../../StocksTable/StocksFilters";
@@ -32,6 +32,14 @@ export default function Stocks() {
   function handleSearchChange(searchTerm: string) {
     dispatch(setSearchTerm(searchTerm));
   }
+
+  const noData = useMemo(
+    () =>
+      filteredStocks &&
+      filteredStocks.length === 0 &&
+      (searchTerm !== "" || selectedSector !== ""),
+    [filteredStocks, selectedSector, searchTerm],
+  );
 
   function handleClearSearch() {
     dispatch(setSearchTerm(""));
@@ -66,7 +74,7 @@ export default function Stocks() {
             />
           </Box>
           <Box width="100%" overflow="hidden" component={Paper} p={2}>
-            <StocksTable stocks={filteredStocks} />
+            <StocksTable stocks={filteredStocks} noData={noData} />
           </Box>
         </>
       )}

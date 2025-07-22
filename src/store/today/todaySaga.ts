@@ -8,7 +8,7 @@ import type { Stock } from "../../types/today/today";
 function* loadTodayStocks() {
   try {
     // Simulate an API call
-    yield new Promise((resolve) => setTimeout(resolve, 2000));
+    yield new Promise((resolve) => setTimeout(resolve, 1000));
     let todayStocks = todayStocksRawData;
 
     const portfoliosRawData: PortfolioRawData[] = [];

@@ -62,7 +62,7 @@ function getPortfolioHistory(portfolioId: string) {
 
 function* loadPortfolios() {
   try {
-    yield new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call delay
+    yield new Promise((resolve) => setTimeout(resolve, 500)); // Simulate API call delay
 
     yield put(setPortfoliosRawData(portfoliosRawData));
     const portfoliosData = addIdsToPortfolios(portfoliosRawData);
