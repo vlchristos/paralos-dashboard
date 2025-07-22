@@ -68,12 +68,20 @@ export default function Stocks() {
       {filteredStocks && (
         <>
           <Box
-            display="flex"
-            mb={2}
-            alignItems={{ xs: "flex-start", sm: "end" }}
-            justifyContent="space-between"
-            width="100%"
-            sx={{ flexDirection: { xs: "column", sm: "row" } }}
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { xs: "flex-start", md: "end" },
+              justifyContent: "space-between",
+              py: 2,
+              mx: -3,
+              mb: 2,
+              px: 3,
+              backgroundColor: "background.paper",
+              position: "sticky",
+              top: 64,
+              zIndex: 1,
+            }}
           >
             <Typography variant="h5" gutterBottom>
               Stocks

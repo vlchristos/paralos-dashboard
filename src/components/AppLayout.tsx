@@ -11,7 +11,13 @@ export default function AppLayout({ children }: LayoutProps) {
     <Box display="flex">
       <AppHeader />
       <AppDrawer />
-      <Box sx={{ flexGrow: 1, p: 3, overflowX: "hidden" }}>
+      <Box
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          overflowX: { xs: "hidden", md: "initial" },
+        }}
+      >
         <Toolbar />
         {children}
       </Box>

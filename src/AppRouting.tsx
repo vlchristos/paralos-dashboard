@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "./components/Pages/home";
 import Stocks from "./components/Pages/stocks";
 import AppLayout from "./components/AppLayout";
+import { Box, Typography } from "@mui/material";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,20 @@ export const router = createBrowserRouter([
   },
   {
     path: "*",
-    Component: () => <AppLayout>Page Not Found</AppLayout>, // Fallback for unmatched routes
+    Component: () => (
+      <AppLayout>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="100svh"
+          width="100%"
+        >
+          <Typography variant="h6" color="textSecondary">
+            Coming soon
+          </Typography>
+        </Box>
+      </AppLayout>
+    ), // Fallback for unmatched routes
   },
 ]);

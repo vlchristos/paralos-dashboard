@@ -59,11 +59,11 @@ export default function StocksFilters({
   return (
     <Box
       display="flex"
-      flexDirection={{ xs: "column", sm: "row" }}
+      flexDirection={{ xs: "column", md: "row" }}
       gap={2}
-      width={{ xs: "100%", sm: "auto" }}
+      width={{ xs: "100%", md: "auto" }}
     >
-      <FormControl fullWidth>
+      <FormControl sx={{ width: { xs: "100%", md: 300 } }}>
         <TextField
           fullWidth
           id="search"
@@ -93,9 +93,10 @@ export default function StocksFilters({
         />
       </FormControl>
       {sectors.length > 0 && (
-        <FormControl fullWidth sx={{ minWidth: 140 }}>
+        <FormControl sx={{ width: { xs: "100%", md: 200 } }}>
           <InputLabel id="sector-select">Sector</InputLabel>
           <Select
+            fullWidth
             labelId="sector-select"
             id="sector-select"
             value={selectedSector}

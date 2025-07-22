@@ -59,10 +59,10 @@ export default function Home() {
           <Box
             display="flex"
             mb={2}
-            alignItems={{ xs: "flex-start", sm: "end" }}
+            alignItems={{ xs: "flex-start", md: "end" }}
             justifyContent="space-between"
             width="100%"
-            sx={{ flexDirection: { xs: "column", sm: "row" } }}
+            sx={{ flexDirection: { xs: "column", md: "row" } }}
           >
             <Typography variant="h5" gutterBottom>
               Stocks
