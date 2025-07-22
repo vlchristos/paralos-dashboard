@@ -8,7 +8,7 @@ import {
 
 export default function PeriodSelector() {
   const dispatch = useAppDispatch();
-  const period: Period = useAppSelector((state) => state.stocks.period);
+  const period: Period = useAppSelector((state) => state.stocks.periodMonths);
 
   const handleChange = (
     _event: React.MouseEvent<HTMLElement>,
