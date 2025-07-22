@@ -5,10 +5,6 @@ import { selectActivePortfolioStats } from "../../../store/portfolios/selectors"
 export default function PortfolioStats() {
   const selectedPortfolioStats = useAppSelector(selectActivePortfolioStats);
 
-  function isNegative(value?: number): boolean {
-    return value !== undefined && value < 0;
-  }
-
   if (!selectedPortfolioStats) {
     return (
       <Box
