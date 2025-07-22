@@ -1,19 +1,22 @@
 import { Box, Paper, Typography } from "@mui/material";
 import AppLayout from "../../AppLayout";
 import { useAppDispatch, useAppSelector } from "../../../store";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import StocksTable from "../../StocksTable";
 import type { Stock } from "../../../types/today/today";
 import StocksFilters from "../../StocksTable/StocksFilters";
 import {
+  clearSelectedStockData,
   getAvailableStocks,
   setSearchTerm,
   setSelectedSector,
+  setSelectedStock,
 } from "../../../store/stocks/stocksSlice";
 import {
   selectFilteredStocks,
   selectSectorsFromAvailableStocks,
 } from "../../../store/stocks/selectors";
+import SingleStockDialog from "./Modal/SingleStockDialog";
 
 export default function Stocks() {
   const dispatch = useAppDispatch();
@@ -24,6 +27,7 @@ export default function Stocks() {
     (state) => state.stocks.selectedSector,
   );
   const searchTerm: string = useAppSelector((state) => state.stocks.searchTerm);
+  const [modalOpen, setModalOpen] = useState(false);
 
   function handleSectorChange(sectorId: string) {
     dispatch(setSelectedSector(sectorId));
@@ -33,6 +37,20 @@ export default function Stocks() {
     dispatch(setSearchTerm(searchTerm));
   }
 
+  function handleClearSearch() {
+    dispatch(setSearchTerm(""));
+  }
+
+  function handleRowClick(symbol: string) {
+    dispatch(setSelectedStock(symbol));
+    setModalOpen(true);
+  }
+
+  function handleOnClose() {
+    setModalOpen(false);
+    dispatch(clearSelectedStockData());
+  }
+
   const noData = useMemo(
     () =>
       filteredStocks &&
@@ -40,10 +58,6 @@ export default function Stocks() {
       (searchTerm !== "" || selectedSector !== ""),
     [filteredStocks, selectedSector, searchTerm],
   );
-
-  function handleClearSearch() {
-    dispatch(setSearchTerm(""));
-  }
 
   useEffect(() => {
     dispatch(getAvailableStocks());
@@ -74,10 +88,15 @@ export default function Stocks() {
             />
           </Box>
           <Box width="100%" overflow="hidden" component={Paper} p={2}>
-            <StocksTable stocks={filteredStocks} noData={noData} />
+            <StocksTable
+              stocks={filteredStocks}
+              noData={noData}
+              onRowClick={handleRowClick}
+            />
           </Box>
         </>
       )}
+      <SingleStockDialog open={modalOpen} handleClose={handleOnClose} />
     </AppLayout>
   );
 }
