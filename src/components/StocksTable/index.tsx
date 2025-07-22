@@ -10,6 +10,7 @@ import TableRow from "@mui/material/TableRow";
 type StocksTableProps = {
   stocks: Stock[];
   noData?: boolean;
+  onRowClick?: (symbol: string) => void;
 };
 
 function createData(
@@ -28,7 +29,17 @@ function createData(
   };
 }
 
-export default function StocksTable({ stocks, noData }: StocksTableProps) {
+export default function StocksTable({
+  stocks,
+  noData,
+  onRowClick,
+}: StocksTableProps) {
+  function handleRowClick(symbol: string) {
+    if (onRowClick) {
+      onRowClick(symbol);
+    }
+  }
+
   const rows = stocks.map((stock) =>
     createData(
       stock.symbol,
@@ -83,7 +94,14 @@ export default function StocksTable({ stocks, noData }: StocksTableProps) {
           {rows.map((row) => (
             <TableRow
               key={row.symbol}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+                "&:hover": {
+                  backgroundColor: onRowClick && "rgba(0, 0, 0, 0.04)",
+                  cursor: onRowClick ? "pointer" : "default",
+                },
+              }}
+              onClick={() => handleRowClick(row.symbol)}
             >
               <TableCell component="th" scope="row">
                 <Box

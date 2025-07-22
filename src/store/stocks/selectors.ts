@@ -6,6 +6,17 @@ export const selectAvailableStocks = (state: RootState) => {
   return state.stocks.availableStocks;
 };
 
+export const selectActiveStock = (state: RootState) =>
+  state.stocks.selectedStock;
+
+export const selectActiveSector = (state: RootState) =>
+  state.stocks.selectedSector;
+
+export const selectActivePeriod = (state: RootState) => state.stocks.period;
+
+export const selectActiveStockData = (state: RootState) =>
+  state.stocks.selectedStockData;
+
 export const selectSectorsFromAvailableStocks = createSelector(
   [selectAvailableStocks],
   (availableStocks) => {
@@ -22,9 +33,6 @@ export const selectSectorsFromAvailableStocks = createSelector(
     }));
   },
 );
-
-export const selectActiveSector = (state: RootState) =>
-  state.stocks.selectedSector;
 
 export const selectStocksBySearchTerm = createSelector(
   [selectAvailableStocks, (state: RootState) => state.stocks.searchTerm],
@@ -59,5 +67,66 @@ export const selectFilteredStocks = createSelector(
         (searchStock) => searchStock.symbol === stock.symbol,
       ),
     );
+  },
+);
+
+export const selectActiveStockDetails = createSelector(
+  [selectAvailableStocks, selectActiveStock],
+  (availableStocks, selectedStock) => {
+    if (!selectedStock) return null;
+    const stock = availableStocks.find(
+      (stock) => stock.symbol === selectedStock,
+    );
+    return {
+      symbol: stock?.symbol || "",
+      name: stock?.name || "",
+      sector: stock?.sector || "",
+    };
+  },
+);
+
+export const selectActiveStockDataByPeriod = createSelector(
+  [selectActiveStockData, selectActivePeriod],
+  (activeStockData, activePeriod) => {
+    while (activeStockData.length === 0 || !activePeriod) {
+      return []; // if no stock data is available, return an empty array
+    }
+
+    if (activePeriod === "max") {
+      return activeStockData; // if period is 'max', return all data
+    }
+
+    let periodMonths: number;
+
+    switch (activePeriod) {
+      case "1m":
+        periodMonths = 1;
+        break;
+      case "6m":
+        periodMonths = 6;
+        break;
+      case "1y":
+        periodMonths = 12;
+        break;
+      default:
+        return []; // if no valid period, return empty array
+    }
+
+    const mostRecent = new Date(
+      activeStockData[activeStockData.length - 1].date,
+    );
+
+    function getPastDate(monthsAgo: number) {
+      const pastDate = new Date(mostRecent);
+      pastDate.setMonth(pastDate.getMonth() - monthsAgo);
+      return pastDate;
+    }
+
+    const pastDate = getPastDate(periodMonths);
+
+    return activeStockData.filter((data) => {
+      const dataDate = new Date(data.date);
+      return dataDate >= pastDate && dataDate <= mostRecent;
+    });
   },
 );
